@@ -75,6 +75,32 @@ body.light-theme .bg-slate-700 {
   background-color: #ffffff !important;
 }
 
+/* Achievements/results banner: override dark gradient in light mode */
+body.light-theme #achievements .bg-gradient-to-br {
+  background: linear-gradient(
+    135deg,
+    rgba(239, 246, 255, 0.95),
+    rgba(219, 234, 254, 0.95)
+  ) !important;
+  border-color: rgba(148, 163, 184, 0.4) !important;
+}
+
+body.light-theme #achievements .counter {
+  color: #0f172a !important;
+}
+
+/* Generic fix: any large gradient backgrounds become light in light mode
+   so content on them is readable across all sections/pages. */
+body.light-theme .bg-gradient-to-br,
+body.light-theme .bg-gradient-to-b,
+body.light-theme .bg-gradient-to-r {
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98),
+    rgba(239, 246, 255, 0.98)
+  ) !important;
+}
+
 /* Hero overlay tweaks so image + text stay legible in light mode */
 body.light-theme #hero .absolute.inset-0 {
   background: linear-gradient(to bottom, rgba(15, 23, 42, 0.15), rgba(15, 23, 42, 0.55)) !important;
