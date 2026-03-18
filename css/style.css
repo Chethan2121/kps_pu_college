@@ -1,0 +1,173 @@
+/* KPS PU College - Global styles
+   Tailwind handles most styling; this file adjusts shared components and custom utilities. */
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+/* Theme shells – JS just toggles these classes */
+body.dark-theme {
+  background-color: #020617;
+  color: #e2e8f0;
+}
+
+body.light-theme {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Override dark text utilities when in light mode so content stays readable */
+body.light-theme .text-slate-50,
+body.light-theme .text-slate-100,
+body.light-theme .text-slate-200,
+body.light-theme .text-slate-300 {
+  color: #0f172a !important;
+}
+
+body.light-theme .text-slate-400 {
+  color: #1f2937 !important;
+}
+
+/* Cards / blocks that had dark backgrounds now get light ones */
+body.light-theme .navbar {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(148, 163, 184, 0.6);
+}
+
+body.light-theme footer {
+  background-color: #ffffff;
+  border-color: rgba(148, 163, 184, 0.6);
+}
+
+body.light-theme .navbar .nav-link {
+  color: #0f172a;
+}
+
+body.light-theme .navbar .nav-link:hover,
+body.light-theme .navbar .nav-link.active {
+  color: #0b1120;
+}
+
+body.light-theme .facility-card,
+body.light-theme .testimonial-slide,
+body.light-theme .gallery-item > div,
+body.light-theme section {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #0f172a;
+}
+
+body.light-theme .facility-card p,
+body.light-theme .testimonial-slide p,
+body.light-theme .gallery-item p,
+body.light-theme section p {
+  color: #1e293b;
+}
+
+/* Explicitly soften very dark backgrounds in light mode */
+body.light-theme .bg-slate-950,
+body.light-theme .bg-slate-950\/80,
+body.light-theme .bg-slate-950\/90,
+body.light-theme .bg-slate-900,
+body.light-theme .bg-slate-900\/80,
+body.light-theme .bg-slate-800,
+body.light-theme .bg-slate-700 {
+  background-color: #ffffff !important;
+}
+
+/* Hero overlay tweaks so image + text stay legible in light mode */
+body.light-theme #hero .absolute.inset-0 {
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.15), rgba(15, 23, 42, 0.55)) !important;
+}
+
+body.light-theme .nav-link::after {
+  background: linear-gradient(to right, #2563eb, #f59e0b);
+}
+
+.navbar .nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0;
+  color: #cbd5f5;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #2563eb, #facc15);
+  transition: width 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #ffffff;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar .nav-link.active {
+  color: #ffffff;
+}
+
+/* Gallery filter buttons */
+.gallery-filter {
+  border-radius: 9999px;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.8);
+  color: #e5e7eb;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gallery-filter:hover {
+  background: rgba(30, 64, 175, 0.7);
+  border-color: rgba(129, 140, 248, 0.9);
+}
+
+.gallery-filter.active {
+  background: linear-gradient(to right, #2563eb, #facc15);
+  color: #020617;
+  border-color: transparent;
+}
+
+/* Back-to-top visibility animation */
+#backToTop.show {
+  display: flex;
+  animation: fadeInUp 0.25s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0.75rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Preloader fade-out */
+body.loaded #preloader {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Simple utility in case of missing images */
+img::selection,
+video::selection {
+  background: transparent;
+}
+

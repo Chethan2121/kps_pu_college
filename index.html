@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KPS PU College | Premier Pre-University Education</title>
+  <meta name="description" content="KPS PU College offers premier Pre-University education with expert faculty, modern facilities, and a student-first learning environment." />
+  <meta name="keywords" content="KPS PU College, Pre University, PCMB, PCMC, PU College" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              700: '#1e40af',
+            },
+            accent: {
+              400: '#facc15',
+              500: '#eab308',
+            },
+            darkBg: '#020617',
+            glassLight: 'rgba(255, 255, 255, 0.12)',
+            glassDark: 'rgba(15, 23, 42, 0.7)',
+          },
+          boxShadow: {
+            'glow': '0 0 40px rgba(37, 99, 235, 0.35)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="font-sans bg-slate-950 text-slate-100 antialiased">
+  <!-- Page Loader -->
+  <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950">
+    <div class="relative">
+      <div class="h-20 w-20 rounded-full border-4 border-primary-500 border-t-transparent animate-spin"></div>
+      <div class="absolute inset-0 flex items-center justify-center text-sm tracking-[0.3em] uppercase text-slate-200">
+        KPS
+      </div>
+    </div>
+  </div>
+
+  <!-- Gradient background decorations -->
+  <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute -left-32 top-0 h-80 w-80 rounded-full bg-primary-600/30 blur-3xl"></div>
+    <div class="absolute bottom-0 right-[-6rem] h-96 w-96 rounded-full bg-accent-500/20 blur-3xl"></div>
+  </div>
+
+  <!-- Back to top button -->
+  <button
+    id="backToTop"
+    aria-label="Back to top"
+    class="fixed bottom-6 right-6 z-40 hidden h-11 w-11 items-center justify-center rounded-full bg-primary-600 text-white shadow-lg shadow-primary-600/40 transition hover:bg-primary-500"
+  >
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Navbar -->
+  <header
+    class="navbar fixed inset-x-0 top-0 z-30 border-b border-white/5 bg-slate-950/80 backdrop-blur-xl transition-colors"
+  >
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
+      <a href="index.html" class="flex items-center gap-3">
+        <div
+          class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 text-lg font-semibold text-slate-900 shadow-md shadow-primary-500/40"
+        >
+          K
+        </div>
+        <div class="leading-tight">
+          <div class="text-sm font-semibold tracking-wide text-slate-50">
+            KPS PU College
+          </div>
+          <div class="text-[11px] text-slate-400">
+            Premier Pre-University Institution
+          </div>
+        </div>
+      </a>
+
+      <nav
+        id="navMenu"
+        class="absolute left-0 right-0 top-full hidden flex-col gap-2 border-b border-slate-800 bg-slate-950/95 px-4 pb-4 pt-2 text-sm md:static md:flex md:flex-row md:items-center md:gap-6 md:border-none md:bg-transparent md:p-0"
+      >
+        <a href="index.html#hero" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a
+          href="#contact"
+          class="mt-2 inline-flex items-center justify-center rounded-full bg-primary-600 px-4 py-1.5 text-xs font-semibold text-white shadow-lg shadow-primary-600/40 transition hover:bg-primary-500 md:mt-0"
+        >
+          Apply Now
+        </a>
+
+        <!-- Dark mode toggle (desktop & mobile inside nav) -->
+        <button
+          id="themeToggle"
+          class="mt-2 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition hover:bg-white/10 md:mt-0"
+          type="button"
+          aria-label="Toggle dark mode"
+        >
+          <i class="fa-solid fa-moon text-xs"></i>
+        </button>
+      </nav>
+
+      <button
+        id="navToggle"
+        class="ml-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-100 md:hidden"
+        aria-label="Toggle navigation"
+        type="button"
+      >
+        <i class="fa-solid fa-bars text-sm"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="pt-20 md:pt-24">
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-[85vh] overflow-hidden">
+      <div class="absolute inset-0 -z-10">
+        <div class="hero-media">
+          <!-- Optional: replace with a campus video under assets/videos -->
+          <img
+            src="assets/images/campus-hero.jpg"
+            alt="KPS PU College campus"
+            class="h-full w-full object-cover opacity-30"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/80 to-slate-950"></div>
+        </div>
+      </div>
+
+      <div class="mx-auto flex max-w-6xl flex-col items-center gap-12 px-4 pb-20 pt-16 md:flex-row md:px-6 md:pt-24">
+        <div class="w-full md:w-3/5" data-aos="fade-right">
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.2em] text-accent-400 ring-1 ring-white/10">
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+            Admissions Open 2026–27
+          </span>
+          <h1 class="mt-5 text-3xl font-semibold leading-tight text-slate-50 sm:text-4xl lg:text-[2.8rem]">
+            Nurturing Tomorrow's
+            <span class="bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 bg-clip-text text-transparent">
+              Leaders in Science & Technology
+            </span>
+          </h1>
+          <p class="mt-4 max-w-xl text-sm text-slate-300 sm:text-base">
+            KPS PU College blends academic excellence with holistic development,
+            preparing students for competitive exams, professional courses, and
+            life beyond the classroom.
+          </p>
+
+          <div class="mt-7 flex flex-wrap items-center gap-3">
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center rounded-full bg-primary-600 px-6 py-2.5 text-xs font-semibold text-white shadow-glow shadow-primary-600/50 transition hover:-translate-y-0.5 hover:bg-primary-500 sm:text-sm"
+            >
+              Apply Now
+              <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+            </a>
+            <a
+              href="courses.html"
+              class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-2.5 text-xs font-semibold text-slate-100 shadow-lg shadow-slate-950/60 transition hover:-translate-y-0.5 hover:bg-white/10 sm:text-sm"
+            >
+              Explore Courses
+            </a>
+          </div>
+
+          <div class="mt-8 grid max-w-lg grid-cols-3 gap-4 text-xs sm:text-sm">
+            <div class="rounded-2xl bg-glassLight/40 p-3 ring-1 ring-white/10 backdrop-blur-xl">
+              <div class="text-lg font-semibold text-accent-400">1000+</div>
+              <div class="mt-1 text-slate-300">Students mentored</div>
+            </div>
+            <div class="rounded-2xl bg-glassLight/40 p-3 ring-1 ring-white/10 backdrop-blur-xl">
+              <div class="text-lg font-semibold text-accent-400">95%</div>
+              <div class="mt-1 text-slate-300">Board exam success</div>
+            </div>
+            <div class="rounded-2xl bg-glassLight/40 p-3 ring-1 ring-white/10 backdrop-blur-xl">
+              <div class="text-lg font-semibold text-accent-400">Top</div>
+              <div class="mt-1 text-slate-300">Ranks in CET & NEET</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-2/5" data-aos="fade-left">
+          <div
+            class="relative rounded-3xl bg-gradient-to-b from-white/10 to-white/5 p-[1px] shadow-2xl shadow-primary-900/70"
+          >
+            <div class="rounded-[1.4rem] bg-slate-950/80 p-5 backdrop-blur-xl">
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 text-lg font-semibold text-slate-900 shadow-md shadow-primary-500/40"
+                >
+                  K
+                </div>
+                <div class="text-xs text-slate-300">
+                  Your journey to premier
+                  <span class="font-semibold text-slate-50">Pre-University education</span>
+                  starts here.
+                </div>
+              </div>
+
+              <div class="mt-5 grid grid-cols-2 gap-3 text-xs">
+                <div class="rounded-xl bg-white/5 p-3 ring-1 ring-white/10">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[11px] uppercase tracking-wide text-slate-400">Streams</span>
+                    <i class="fa-solid fa-diagram-project text-primary-400"></i>
+                  </div>
+                  <div class="mt-2 font-semibold text-slate-50">PCMB & PCMC</div>
+                  <p class="mt-1 text-[11px] text-slate-400">
+                    NEET, JEE & CET oriented teaching.
+                  </p>
+                </div>
+                <div class="rounded-xl bg-white/5 p-3 ring-1 ring-white/10">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[11px] uppercase tracking-wide text-slate-400">Campus</span>
+                    <i class="fa-solid fa-building-columns text-accent-400"></i>
+                  </div>
+                  <div class="mt-2 font-semibold text-slate-50">Modern Facilities</div>
+                  <p class="mt-1 text-[11px] text-slate-400">
+                    Digital classrooms, advanced labs & library.
+                  </p>
+                </div>
+                <div class="rounded-xl bg-white/5 p-3 ring-1 ring-white/10">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[11px] uppercase tracking-wide text-slate-400">Care</span>
+                    <i class="fa-solid fa-users text-emerald-400"></i>
+                  </div>
+                  <div class="mt-2 font-semibold text-slate-50">Mentorship</div>
+                  <p class="mt-1 text-[11px] text-slate-400">
+                    Individual attention & academic counselling.
+                  </p>
+                </div>
+                <div class="rounded-xl bg-white/5 p-3 ring-1 ring-white/10">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[11px] uppercase tracking-wide text-slate-400">Safety</span>
+                    <i class="fa-solid fa-shield-heart text-sky-400"></i>
+                  </div>
+                  <div class="mt-2 font-semibold text-slate-50">Safe Campus</div>
+                  <p class="mt-1 text-[11px] text-slate-400">
+                    Secure environment with hostel facilities.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-5 flex items-center justify-between rounded-xl bg-slate-900/80 p-3 ring-1 ring-white/10">
+                <div>
+                  <div class="text-[11px] uppercase tracking-wide text-slate-400">
+                    KPS Advantage
+                  </div>
+                  <div class="text-xs font-medium text-slate-100">
+                    Integrated coaching for competitive exams
+                  </div>
+                </div>
+                <a
+                  href="about.html"
+                  class="inline-flex h-8 items-center justify-center rounded-full bg-primary-600 px-3 text-[11px] font-semibold text-white shadow-md shadow-primary-600/40 hover:bg-primary-500"
+                >
+                  Know More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Preview -->
+    <section id="about" class="py-14 md:py-16">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <div class="grid gap-10 md:grid-cols-[1.3fr,1fr] md:items-center">
+          <div data-aos="fade-up">
+            <div class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
+              About KPS PU College
+            </div>
+            <h2 class="mt-3 text-2xl font-semibold text-slate-50 sm:text-3xl">
+              A focused environment for academic excellence & character building.
+            </h2>
+            <p class="mt-3 text-sm text-slate-300 sm:text-base">
+              KPS PU College is committed to empowering young minds through a
+              rigorous academic framework, supportive mentorship, and values-driven
+              education. We combine modern teaching methodologies with a disciplined
+              campus culture to help every student discover their true potential.
+            </p>
+            <div class="mt-5 grid gap-4 text-sm sm:grid-cols-2">
+              <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                <h3 class="flex items-center gap-2 text-sm font-semibold text-slate-50">
+                  <i class="fa-solid fa-bullseye text-accent-400"></i>
+                  Vision
+                </h3>
+                <p class="mt-2 text-xs text-slate-300 sm:text-sm">
+                  To be a premier pre-university institution nurturing
+                  intellectually capable, socially responsible, and morally grounded
+                  individuals.
+                </p>
+              </div>
+              <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                <h3 class="flex items-center gap-2 text-sm font-semibold text-slate-50">
+                  <i class="fa-solid fa-lightbulb text-primary-400"></i>
+                  Mission
+                </h3>
+                <p class="mt-2 text-xs text-slate-300 sm:text-sm">
+                  To deliver concept-driven learning, competitive exam readiness,
+                  and personal development through dedicated faculty and an
+                  inspiring campus environment.
+                </p>
+              </div>
+            </div>
+            <div class="mt-5 flex flex-wrap items-center gap-3 text-xs text-slate-300">
+              <div class="inline-flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                Integrated coaching
+              </div>
+              <div class="inline-flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                Structured mentorship
+              </div>
+              <div class="inline-flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                Outcome-driven assessments
+              </div>
+            </div>
+            <div class="mt-6">
+              <a
+                href="about.html"
+                class="inline-flex items-center text-xs font-semibold text-primary-300 hover:text-primary-200"
+              >
+                Learn more about KPS PU College
+                <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="md:pl-4" data-aos="fade-left">
+            <div
+              class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-600/60 to-slate-900 ring-1 ring-white/10 shadow-xl shadow-primary-900/50"
+            >
+              <img
+                src="assets/images/classroom.jpg"
+                alt="Interactive classroom at KPS PU College"
+                class="h-64 w-full object-cover opacity-70"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent"></div>
+              <div class="absolute inset-x-0 bottom-0 p-4">
+                <div class="text-xs font-medium uppercase tracking-[0.2em] text-accent-300">
+                  Academic Edge
+                </div>
+                <div class="mt-1 text-sm font-semibold text-slate-50">
+                  Daily doubt-clearing sessions & focused study hours
+                </div>
+                <div class="mt-2 flex items-center gap-3 text-[11px] text-slate-200">
+                  <div class="inline-flex items-center gap-1">
+                    <i class="fa-solid fa-clock text-primary-300"></i>
+                    Study hours
+                  </div>
+                  <div class="inline-flex items-center gap-1">
+                    <i class="fa-solid fa-user-graduate text-accent-300"></i>
+                    Expert faculty
+                  </div>
+                  <div class="inline-flex items-center gap-1">
+                    <i class="fa-solid fa-clipboard-check text-emerald-300"></i>
+                    Weekly tests
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Section (Preview) -->
+    <section id="courses" class="py-14 md:py-16">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+          <div data-aos="fade-up">
+            <div class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
+              Academics
+            </div>
+            <h2 class="mt-3 text-2xl font-semibold text-slate-50 sm:text-3xl">
+              Science streams tailored for competitive success.
+            </h2>
+          </div>
+          <a
+            href="courses.html"
+            class="text-xs font-semibold text-primary-300 hover:text-primary-200"
+          >
+            View all course details
+            <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i>
+          </a>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-2">
+          <!-- PCMB -->
+          <article
+            class="group rounded-3xl bg-gradient-to-b from-white/5 to-white/0 p-[1px] ring-1 ring-white/10 transition hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary-900/60"
+            data-aos="fade-up"
+          >
+            <div class="flex h-full flex-col rounded-[1.4rem] bg-slate-950/80 p-5 backdrop-blur-xl">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold text-slate-50">
+                    PCMB
+                    <span class="ml-1 rounded-full bg-primary-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-primary-200">
+                      Science
+                    </span>
+                  </h3>
+                  <p class="mt-1 text-xs text-slate-300">
+                    Physics, Chemistry, Mathematics & Biology
+                  </p>
+                </div>
+                <div
+                  class="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-500/15 text-primary-300 shadow-md shadow-primary-600/30"
+                >
+                  <i class="fa-solid fa-dna text-lg"></i>
+                </div>
+              </div>
+              <p class="mt-4 text-xs text-slate-300 sm:text-sm">
+                Ideal for students aspiring for Medicine, Dentistry, Pharmacy,
+                Life Sciences and allied health programs, with NEET-oriented
+                preparation woven into the curriculum.
+              </p>
+              <ul class="mt-4 space-y-2 text-xs text-slate-300">
+                <li class="flex items-center gap-2">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  Concept-driven teaching with regular practical exposure.
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  Structured NEET/CET coaching & mock tests.
+                </li>
+              </ul>
+              <div class="mt-4 flex items-center justify-between text-[11px] text-slate-400">
+                <span>Limited intake to ensure attention.</span>
+                <a href="courses.html#pcmb" class="font-semibold text-primary-300 hover:text-primary-200">
+                  Know more
+                  <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PCMC -->
+          <article
+            class="group rounded-3xl bg-gradient-to-b from-white/5 to-white/0 p-[1px] ring-1 ring-white/10 transition hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary-900/60"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="flex h-full flex-col rounded-[1.4rem] bg-slate-950/80 p-5 backdrop-blur-xl">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-lg font-semibold text-slate-50">
+                    PCMC
+                    <span class="ml-1 rounded-full bg-primary-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-primary-200">
+                      Tech
+                    </span>
+                  </h3>
+                  <p class="mt-1 text-xs text-slate-300">
+                    Physics, Chemistry, Mathematics & Computer Science
+                  </p>
+                </div>
+                <div
+                  class="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-500/15 text-primary-300 shadow-md shadow-primary-600/30"
+                >
+                  <i class="fa-solid fa-laptop-code text-lg"></i>
+                </div>
+              </div>
+              <p class="mt-4 text-xs text-slate-300 sm:text-sm">
+                Designed for students targeting Engineering, Computer Science,
+                Data Science, and technology careers, with strong foundations for
+                JEE and CET.
+              </p>
+              <ul class="mt-4 space-y-2 text-xs text-slate-300">
+                <li class="flex items-center gap-2">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  Hands-on programming foundations & lab sessions.
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  Competitive exam oriented problem-solving practice.
+                </li>
+              </ul>
+              <div class="mt-4 flex items-center justify-between text-[11px] text-slate-400">
+                <span>Bridge to top engineering colleges.</span>
+                <a href="courses.html#pcmc" class="font-semibold text-primary-300 hover:text-primary-200">
+                  Know more
+                  <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities Preview -->
+    <section id="facilities" class="py-14 md:py-16">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+          <div data-aos="fade-up">
+            <div class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
+              Campus Facilities
+            </div>
+            <h2 class="mt-3 text-2xl font-semibold text-slate-50 sm:text-3xl">
+              A safe, modern & inspiring campus.
+            </h2>
+          </div>
+          <a
+            href="facilities.html"
+            class="text-xs font-semibold text-primary-300 hover:text-primary-200"
+          >
+            Explore all facilities
+            <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i>
+          </a>
+        </div>
+
+        <div class="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div
+            class="facility-card group rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl transition hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl hover:shadow-primary-900/60"
+            data-aos="fade-up"
+          >
+            <div
+              class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-500/15 text-primary-300"
+            >
+              <i class="fa-solid fa-bed text-lg"></i>
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-slate-50">
+              Separate Hostel
+            </h3>
+            <p class="mt-1 text-xs text-slate-300">
+              Comfortable and secure hostel facilities with dedicated wardens and
+              study hours.
+            </p>
+          </div>
+          <div
+            class="facility-card group rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl transition hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl hover:shadow-primary-900/60"
+            data-aos="fade-up"
+            data-aos-delay="80"
+          >
+            <div
+              class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-500/15 text-primary-300"
+            >
+              <i class="fa-solid fa-book-open text-lg"></i>
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-slate-50">
+              Library & Reading Room
+            </h3>
+            <p class="mt-1 text-xs text-slate-300">
+              Well-stocked library with reference material, journals and calm
+              reading spaces.
+            </p>
+          </div>
+          <div
+            class="facility-card group rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl transition hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl hover:shadow-primary-900/60"
+            data-aos="fade-up"
+            data-aos-delay="140"
+          >
+            <div
+              class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-500/15 text-primary-300"
+            >
+              <i class="fa-solid fa-flask text-lg"></i>
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-slate-50">
+              Science & Computer Labs
+            </h3>
+            <p class="mt-1 text-xs text-slate-300">
+              Well-equipped Physics, Chemistry, Biology and Computer labs for
+              experiential learning.
+            </p>
+          </div>
+          <div
+            class="facility-card group rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl transition hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl hover:shadow-primary-900/60"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-500/15 text-primary-300"
+            >
+              <i class="fa-solid fa-futbol text-lg"></i>
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-slate-50">
+              Sports & Wellness
+            </h3>
+            <p class="mt-1 text-xs text-slate-300">
+              Indoor & outdoor sports, fitness activities and wellness programs
+              for holistic growth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faculty Section (Preview) -->
+    <section id="faculty" class="py-14 md:py-16">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+          <div data-aos="fade-up">
+            <div class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
+              Faculty
+            </div>
+            <h2 class="mt-3 text-2xl font-semibold text-slate-50 sm:text-3xl">
+              Experienced educators dedicated to your success.
+            </h2>
+          </div>
+          <a
+            href="about.html#faculty"
+            class="text-xs font-semibold text-primary-300 hover:text-primary-200"
+          >
+            Meet the entire team
+            <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i>
+          </a>
+        </div>
+
+        <div class="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Sample faculty cards -->
+          <article
+            class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl"
+            data-aos="fade-up"
+          >
+            <div class="relative h-24 w-24 overflow-hidden rounded-2xl bg-slate-800">
+              <img
+                src="assets/images/faculty-1.jpg"
+                alt="Faculty member"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-slate-50">
+              Dr. Ananya Rao
+            </h3>
+            <p class="text-xs text-primary-300">Principal & Physics Faculty</p>
+            <p class="mt-1 text-[11px] text-slate-300">
+              15+ years of experience mentoring board and NEET toppers.
+            </p>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl"
+            data-aos="fade-up"
+            data-aos-delay="80"
+          >
+            <div class="relative h-24 w-24 overflow-hidden rounded-2xl bg-slate-800">
+              <img
+                src="assets/images/faculty-2.jpg"
+                alt="Faculty member"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-slate-50">
+              Prof. Manish Kumar
+            </h3>
+            <p class="text-xs text-primary-300">Mathematics Faculty</p>
+            <p class="mt-1 text-[11px] text-slate-300">
+              Specializes in problem-solving strategies for JEE & CET.
+            </p>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl"
+            data-aos="fade-up"
+            data-aos-delay="140"
+          >
+            <div class="relative h-24 w-24 overflow-hidden rounded-2xl bg-slate-800">
+              <img
+                src="assets/images/faculty-3.jpg"
+                alt="Faculty member"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-slate-50">
+              Ms. Shreya N
+            </h3>
+            <p class="text-xs text-primary-300">Biology Faculty</p>
+            <p class="mt-1 text-[11px] text-slate-300">
+              Passionate about simplifying complex biological concepts.
+            </p>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="relative h-24 w-24 overflow-hidden rounded-2xl bg-slate-800">
+              <img
+                src="assets/images/faculty-4.jpg"
+                alt="Faculty member"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-slate-50">
+              Mr. Aditya Verma
+            </h3>
+            <p class="text-xs text-primary-300">Computer Science Faculty</p>
+            <p class="mt-1 text-[11px] text-slate-300">
+              Focused on building strong logic & programming foundations.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements / Stats -->
+    <section id="achievements" class="py-14 md:py-16">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <div
+          class="overflow-hidden rounded-3xl bg-gradient-to-br from-primary-600/70 via-slate-950 to-slate-950 ring-1 ring-white/10 shadow-xl shadow-primary-900/70"
+        >
+          <div class="grid gap-8 px-6 py-8 md:grid-cols-[1.3fr,1fr] md:items-center md:px-8">
+            <div data-aos="fade-right">
+              <div class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-200">
+                Results & Achievements
+              </div>
+              <h2 class="mt-3 text-2xl font-semibold text-slate-50 sm:text-3xl">
+                Consistent results driven by discipline, mentorship & dedication.
+              </h2>
+              <p class="mt-3 text-sm text-slate-100/90 sm:text-base">
+                Our students regularly secure top scores in PU Board exams and
+                competitive entrance tests. A culture of excellence, continuous
+                assessments and personalised feedback makes the difference.
+              </p>
+              <ul class="mt-4 space-y-2 text-xs text-slate-100/90">
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-emerald-300"></i>
+                  Year-on-year improvement in overall college average.
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-emerald-300"></i>
+                  Dedicated result analysis and remedial support.
+                </li>
+              </ul>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 text-center text-slate-50" data-aos="fade-left">
+              <div class="rounded-2xl bg-slate-950/40 p-4 ring-1 ring-white/10 backdrop-blur-xl">
+                <div class="text-2xl font-semibold counter" data-target="1000">0</div>
+                <div class="mt-1 text-xs font-medium uppercase tracking-wide text-slate-200">
+                  Students Mentored
+                </div>
+              </div>
+              <div class="rounded-2xl bg-slate-950/40 p-4 ring-1 ring-white/10 backdrop-blur-xl">
+                <div class="text-2xl font-semibold counter" data-target="95">0</div>
+                <div class="mt-1 text-xs font-medium uppercase tracking-wide text-slate-200">
+                  Pass Percentage
+                </div>
+              </div>
+              <div class="rounded-2xl bg-slate-950/40 p-4 ring-1 ring-white/10 backdrop-blur-xl">
+                <div class="text-2xl font-semibold counter" data-target="75">0</div>
+                <div class="mt-1 text-xs font-medium uppercase tracking-wide text-slate-200">
+                  Competitive Ranks
+                </div>
+              </div>
+              <div class="rounded-2xl bg-slate-950/40 p-4 ring-1 ring-white/10 backdrop-blur-xl">
+                <div class="text-2xl font-semibold counter" data-target="15">0</div>
+                <div class="mt-1 text-xs font-medium uppercase tracking-wide text-slate-200">
+                  Years of Excellence
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-14 md:py-16">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+          <div data-aos="fade-up">
+            <div class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
+              Student Voices
+            </div>
+            <h2 class="mt-3 text-2xl font-semibold text-slate-50 sm:text-3xl">
+              Stories from our learners.
+            </h2>
+          </div>
+        </div>
+
+        <div class="mt-8" data-aos="fade-up">
+          <div
+            id="testimonialSlider"
+            class="relative overflow-hidden rounded-3xl bg-white/5 p-5 ring-1 ring-white/10 backdrop-blur-xl"
+          >
+            <div class="testimonial-track flex transition-transform duration-500 ease-out">
+              <!-- Slide 1 -->
+              <article class="testimonial-slide w-full shrink-0">
+                <div class="flex flex-col gap-5 md:flex-row md:items-center">
+                  <div class="flex-1">
+                    <p class="text-sm text-slate-100 sm:text-base">
+                      “KPS PU College gave me the right balance of discipline,
+                      academic guidance and emotional support. The weekly tests and
+                      feedback helped me identify my gaps early and stay focused on
+                      my NEET preparation.”
+                    </p>
+                    <div class="mt-4 flex items-center gap-3">
+                      <div class="h-10 w-10 overflow-hidden rounded-full bg-slate-700">
+                        <img
+                          src="assets/images/student-1.jpg"
+                          alt="Student testimonial"
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+                      <div class="text-xs">
+                        <div class="font-semibold text-slate-50">
+                          Aishwarya S
+                        </div>
+                        <div class="text-slate-300">
+                          PCMB | NEET Aspirant
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden flex-1 md:block">
+                    <div
+                      class="relative h-40 overflow-hidden rounded-2xl bg-gradient-to-br from-primary-500/20 to-accent-500/20"
+                    >
+                      <div
+                        class="absolute inset-8 rounded-2xl border border-dashed border-white/20"
+                      ></div>
+                      <div
+                        class="absolute inset-0 flex items-center justify-center text-6xl text-white/10"
+                      >
+                        <i class="fa-solid fa-graduation-cap"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide 2 -->
+              <article class="testimonial-slide w-full shrink-0">
+                <div class="flex flex-col gap-5 md:flex-row md:items-center">
+                  <div class="flex-1">
+                    <p class="text-sm text-slate-100 sm:text-base">
+                      “The faculty are approachable and always ready to clarify
+                      doubts. Regular counselling sessions ensured we stayed
+                      positive and stress-free during board and CET preparations.”
+                    </p>
+                    <div class="mt-4 flex items-center gap-3">
+                      <div class="h-10 w-10 overflow-hidden rounded-full bg-slate-700">
+                        <img
+                          src="assets/images/student-2.jpg"
+                          alt="Student testimonial"
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+                      <div class="text-xs">
+                        <div class="font-semibold text-slate-50">
+                          Rahul M
+                        </div>
+                        <div class="text-slate-300">
+                          PCMC | CET Topper
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden flex-1 md:block">
+                    <div
+                      class="relative h-40 overflow-hidden rounded-2xl bg-gradient-to-br from-primary-500/20 to-accent-500/20"
+                    >
+                      <div
+                        class="absolute inset-8 rounded-2xl border border-dashed border-white/20"
+                      ></div>
+                      <div
+                        class="absolute inset-0 flex items-center justify-center text-6xl text-white/10"
+                      >
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide 3 -->
+              <article class="testimonial-slide w-full shrink-0">
+                <div class="flex flex-col gap-5 md:flex-row md:items-center">
+                  <div class="flex-1">
+                    <p class="text-sm text-slate-100 sm:text-base">
+                      “The environment at KPS PU College is very focused and
+                      motivating. Study hours, combined with doubt-clearing and
+                      friendly faculty, made exam preparation structured and
+                      effective.”
+                    </p>
+                    <div class="mt-4 flex items-center gap-3">
+                      <div class="h-10 w-10 overflow-hidden rounded-full bg-slate-700">
+                        <img
+                          src="assets/images/student-3.jpg"
+                          alt="Student testimonial"
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+                      <div class="text-xs">
+                        <div class="font-semibold text-slate-50">
+                          Nidhi K
+                        </div>
+                        <div class="text-slate-300">
+                          PCMB | Board Topper
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden flex-1 md:block">
+                    <div
+                      class="relative h-40 overflow-hidden rounded-2xl bg-gradient-to-br from-primary-500/20 to-accent-500/20"
+                    >
+                      <div
+                        class="absolute inset-8 rounded-2xl border border-dashed border-white/20"
+                      ></div>
+                      <div
+                        class="absolute inset-0 flex items-center justify-center text-6xl text-white/10"
+                      >
+                        <i class="fa-solid fa-heart"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Slider controls -->
+            <div class="mt-5 flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <button
+                  id="testimonialPrev"
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-slate-200 ring-1 ring-white/10 hover:bg-white/10"
+                  aria-label="Previous testimonial"
+                >
+                  <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                </button>
+                <button
+                  id="testimonialNext"
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-slate-200 ring-1 ring-white/10 hover:bg-white/10"
+                  aria-label="Next testimonial"
+                >
+                  <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                </button>
+              </div>
+              <div class="flex items-center gap-1">
+                <span class="h-1.5 w-4 rounded-full bg-primary-400" data-index="0"></span>
+                <span class="h-1.5 w-1.5 rounded-full bg-slate-500" data-index="1"></span>
+                <span class="h-1.5 w-1.5 rounded-full bg-slate-500" data-index="2"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA Preview -->
+    <section id="contact" class="pb-16">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <div
+          class="overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-primary-700/60 to-slate-900 ring-1 ring-white/10 shadow-xl shadow-primary-900/70"
+          data-aos="fade-up"
+        >
+          <div class="grid gap-8 px-6 py-8 md:grid-cols-[1.1fr,1fr] md:items-center md:px-8">
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-200">
+                Admissions & Enquiries
+              </div>
+              <h2 class="mt-3 text-2xl font-semibold text-slate-50 sm:text-3xl">
+                Ready to begin your journey with KPS PU College?
+              </h2>
+              <p class="mt-3 text-sm text-slate-100/90 sm:text-base">
+                Share your details and our admissions team will guide you through
+                the process, eligibility, scholarships and campus visits.
+              </p>
+              <div class="mt-5 space-y-2 text-sm text-slate-100/90">
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-phone text-accent-200"></i>
+                  <span>+91-XXXXXXXXXX</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-envelope text-accent-200"></i>
+                  <span>admissions@kpspucollege.edu</span>
+                </div>
+              </div>
+            </div>
+
+            <form
+              action="#"
+              method="post"
+              class="space-y-3 rounded-2xl bg-slate-950/60 p-4 ring-1 ring-white/10 backdrop-blur-xl"
+            >
+              <div class="grid gap-3 sm:grid-cols-2">
+                <div>
+                  <label for="name" class="block text-xs font-medium text-slate-200">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="mt-1 w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-50 outline-none ring-primary-500/0 placeholder:text-slate-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/60"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+                <div>
+                  <label for="email" class="block text-xs font-medium text-slate-200">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="mt-1 w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-50 outline-none ring-primary-500/0 placeholder:text-slate-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/60"
+                    placeholder="you@example.com"
+                  />
+                </div>
+              </div>
+              <div class="grid gap-3 sm:grid-cols-2">
+                <div>
+                  <label for="phone" class="block text-xs font-medium text-slate-200">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="mt-1 w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-50 outline-none ring-primary-500/0 placeholder:text-slate-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/60"
+                    placeholder="Contact number"
+                  />
+                </div>
+                <div>
+                  <label for="course" class="block text-xs font-medium text-slate-200">
+                    Interested Stream
+                  </label>
+                  <select
+                    id="course"
+                    name="course"
+                    class="mt-1 w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-50 outline-none ring-primary-500/0 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/60"
+                  >
+                    <option value="" class="bg-slate-900 text-slate-100">
+                      Select stream
+                    </option>
+                    <option value="pcmb" class="bg-slate-900 text-slate-100">
+                      PCMB
+                    </option>
+                    <option value="pcmc" class="bg-slate-900 text-slate-100">
+                      PCMC
+                    </option>
+                    <option value="not-sure" class="bg-slate-900 text-slate-100">
+                      Not sure yet
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="message" class="block text-xs font-medium text-slate-200">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="3"
+                  class="mt-1 w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-50 outline-none ring-primary-500/0 placeholder:text-slate-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/60"
+                  placeholder="Tell us how we can help you"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="flex w-full items-center justify-center rounded-full bg-accent-500 px-4 py-2 text-xs font-semibold text-slate-900 shadow-lg shadow-amber-500/40 transition hover:bg-amber-400"
+              >
+                Submit Enquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 bg-slate-950/90 py-8">
+    <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 text-xs text-slate-300 md:flex-row md:items-center md:justify-between md:px-6">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="text-sm font-semibold text-slate-50">
+            KPS PU College
+          </span>
+        </div>
+        <p class="mt-1 max-w-md text-[11px] text-slate-400">
+          Premier Pre-University College focused on academic excellence,
+          discipline and holistic development.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-4">
+        <div class="flex gap-3">
+          <a
+            href="#"
+            aria-label="Facebook"
+            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-slate-200 ring-1 ring-white/10 hover:bg-white/10"
+          >
+            <i class="fa-brands fa-facebook-f text-[13px]"></i>
+          </a>
+          <a
+            href="#"
+            aria-label="Instagram"
+            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-slate-200 ring-1 ring-white/10 hover:bg-white/10"
+          >
+            <i class="fa-brands fa-instagram text-[13px]"></i>
+          </a>
+          <a
+            href="#"
+            aria-label="LinkedIn"
+            class="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-slate-200 ring-1 ring-white/10 hover:bg-white/10"
+          >
+            <i class="fa-brands fa-linkedin-in text-[13px]"></i>
+          </a>
+        </div>
+        <div class="text-[11px] text-slate-500">
+          © <span id="year"></span> KPS PU College. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+

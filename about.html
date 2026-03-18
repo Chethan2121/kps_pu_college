@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | KPS PU College</title>
+  <meta name="description" content="Learn more about KPS PU College, our vision, mission, leadership and faculty." />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              500: '#2563eb',
+              600: '#1d4ed8',
+            },
+            accent: {
+              400: '#facc15',
+              500: '#eab308',
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="font-sans bg-slate-950 text-slate-100 antialiased">
+  <!-- Shared Navbar -->
+  <header class="navbar fixed inset-x-0 top-0 z-30 border-b border-white/5 bg-slate-950/80 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 text-lg font-semibold text-slate-900 shadow-md shadow-primary-500/40">
+          K
+        </div>
+        <div class="leading-tight">
+          <div class="text-sm font-semibold tracking-wide text-slate-50">
+            KPS PU College
+          </div>
+          <div class="text-[11px] text-slate-400">
+            Premier Pre-University Institution
+          </div>
+        </div>
+      </a>
+
+      <nav
+        id="navMenu"
+        class="absolute left-0 right-0 top-full hidden flex-col gap-2 border-b border-slate-800 bg-slate-950/95 px-4 pb-4 pt-2 text-sm md:static md:flex md:flex-row md:items-center md:gap-6 md:border-none md:bg-transparent md:p-0"
+      >
+        <a href="index.html#hero" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a
+          href="contact.html"
+          class="mt-2 inline-flex items-center justify-center rounded-full bg-primary-600 px-4 py-1.5 text-xs font-semibold text-white shadow-lg shadow-primary-600/40 transition hover:bg-primary-500 md:mt-0"
+        >
+          Apply Now
+        </a>
+        <button
+          id="themeToggle"
+          class="mt-2 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition hover:bg-white/10 md:mt-0"
+          type="button"
+          aria-label="Toggle dark mode"
+        >
+          <i class="fa-solid fa-moon text-xs"></i>
+        </button>
+      </nav>
+
+      <button
+        id="navToggle"
+        class="ml-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-100 md:hidden"
+        aria-label="Toggle navigation"
+        type="button"
+      >
+        <i class="fa-solid fa-bars text-sm"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="pt-20 md:pt-24">
+    <!-- Page header -->
+    <section class="relative overflow-hidden border-b border-white/5 bg-gradient-to-br from-slate-950 via-slate-900 to-primary-900/40 py-14 md:py-16">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute -left-24 top-0 h-64 w-64 rounded-full bg-primary-600/30 blur-3xl"></div>
+        <div class="absolute bottom-0 right-[-6rem] h-80 w-80 rounded-full bg-accent-500/20 blur-3xl"></div>
+      </div>
+      <div class="mx-auto max-w-6xl px-4 md:px-6 relative">
+        <p class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
+          About Us
+        </p>
+        <h1 class="mt-3 text-2xl font-semibold text-slate-50 sm:text-3xl">
+          Shaping bright futures with care, discipline & excellence.
+        </h1>
+        <p class="mt-3 max-w-2xl text-sm text-slate-300 sm:text-base">
+          KPS PU College provides a nurturing environment for students to excel in academics,
+          discover their strengths and prepare confidently for professional courses and life beyond.
+        </p>
+      </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="py-12 md:py-14">
+      <div class="mx-auto max-w-6xl px-4 md:px-6 grid gap-8 md:grid-cols-[1.3fr,1fr] md:items-start">
+        <div data-aos="fade-up">
+          <h2 class="text-xl font-semibold text-slate-50 sm:text-2xl">
+            Our Story
+          </h2>
+          <p class="mt-3 text-sm text-slate-300 sm:text-base">
+            Founded with a clear commitment to academic excellence, KPS PU College
+            has steadily grown into a trusted institution for Science stream aspirants.
+            With a focus on strong fundamentals, disciplined study habits and
+            personalised mentoring, our students are guided to achieve their goals
+            in board and competitive examinations.
+          </p>
+          <p class="mt-3 text-sm text-slate-300 sm:text-base">
+            We believe that Pre-University education is a crucial bridge between
+            school and professional courses. Our carefully curated academic ecosystem,
+            value-based culture and supportive faculty team ensure that students build
+            confidence, resilience and clarity of purpose.
+          </p>
+
+          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10" data-aos="fade-up">
+              <h3 class="flex items-center gap-2 text-sm font-semibold text-slate-50">
+                <i class="fa-solid fa-bullseye text-accent-400"></i>
+                Vision
+              </h3>
+              <p class="mt-2 text-xs text-slate-300 sm:text-sm">
+                To be recognised as a premier PU institution that moulds responsible,
+                empathetic and academically strong individuals who contribute positively
+                to society.
+              </p>
+            </div>
+            <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10" data-aos="fade-up" data-aos-delay="80">
+              <h3 class="flex items-center gap-2 text-sm font-semibold text-slate-50">
+                <i class="fa-solid fa-lightbulb text-primary-400"></i>
+                Mission
+              </h3>
+              <p class="mt-2 text-xs text-slate-300 sm:text-sm">
+                To offer concept-focused teaching, robust assessment systems and
+                comprehensive mentoring that equips students to excel in board exams
+                and competitive entrances.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4" data-aos="fade-left">
+          <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+            <h3 class="flex items-center gap-2 text-sm font-semibold text-slate-50">
+              <i class="fa-solid fa-hand-holding-heart text-emerald-400"></i>
+              Core Values
+            </h3>
+            <ul class="mt-2 space-y-1.5 text-xs text-slate-300">
+              <li>Discipline and integrity in all aspects of campus life.</li>
+              <li>Student-first approach to teaching and mentoring.</li>
+              <li>Transparency in academic processes and evaluations.</li>
+              <li>Respect, empathy and inclusivity for all students.</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+            <h3 class="flex items-center gap-2 text-sm font-semibold text-slate-50">
+              <i class="fa-solid fa-clipboard-check text-accent-400"></i>
+              Academic Edge
+            </h3>
+            <ul class="mt-2 space-y-1.5 text-xs text-slate-300">
+              <li>Planned academic calendar with topic-wise coverage.</li>
+              <li>Weekly tests, mid-terms and preparatory exams.</li>
+              <li>Regular parent-teacher interactions & performance reviews.</li>
+              <li>Guidance for course selection after PU.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section class="py-10 md:py-12 border-t border-white/5">
+      <div class="mx-auto max-w-6xl px-4 md:px-6 grid gap-8 md:grid-cols-[1.1fr,1fr] md:items-start">
+        <div data-aos="fade-up">
+          <h2 class="text-xl font-semibold text-slate-50 sm:text-2xl">
+            Leadership Message
+          </h2>
+          <p class="mt-3 text-sm text-slate-300 sm:text-base">
+            At KPS PU College, we understand the aspirations and anxieties that
+            accompany these crucial two years. Our leadership and faculty work
+            closely with every student to build confidence, clarify concepts and
+            nurture the right exam temperament.
+          </p>
+          <p class="mt-3 text-sm text-slate-300 sm:text-base">
+            We strongly encourage open communication, regular feedback and
+            collaborative problem-solving. Our aim is not just to help students
+            score well, but to prepare them to thrive in highly competitive and
+            rapidly changing professional landscapes.
+          </p>
+        </div>
+        <div class="flex items-start gap-4" data-aos="fade-left">
+          <div class="h-24 w-24 overflow-hidden rounded-2xl bg-slate-800">
+            <img
+              src="assets/images/principal.jpg"
+              alt="Principal of KPS PU College"
+              class="h-full w-full object-cover"
+            />
+          </div>
+          <div class="text-xs text-slate-300">
+            <p>
+              “Every student has unique strengths and pace of learning. At KPS,
+              we strive to understand each learner and provide them the right
+              environment, guidance and encouragement to unlock their best.”
+            </p>
+            <div class="mt-3">
+              <div class="font-semibold text-slate-50">Dr. Ananya Rao</div>
+              <div class="text-slate-400">
+                Principal, KPS PU College
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faculty grid -->
+    <section id="faculty" class="py-12 md:py-14 border-t border-white/5">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+          <div data-aos="fade-up">
+            <p class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
+              Faculty
+            </p>
+            <h2 class="mt-3 text-xl font-semibold text-slate-50 sm:text-2xl">
+              A team of committed educators.
+            </h2>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Reusing sample faculty cards -->
+          <article class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl" data-aos="fade-up">
+            <div class="relative h-24 w-24 overflow-hidden rounded-2xl bg-slate-800">
+              <img src="assets/images/faculty-1.jpg" alt="Faculty member" class="h-full w-full object-cover" />
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-slate-50">Dr. Ananya Rao</h3>
+            <p class="text-xs text-primary-300">Principal & Physics Faculty</p>
+            <p class="mt-1 text-[11px] text-slate-300">
+              Specialises in Mechanics and Electromagnetism with a track record of NEET & JEE toppers.
+            </p>
+          </article>
+
+          <article class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="80">
+            <div class="relative h-24 w-24 overflow-hidden rounded-2xl bg-slate-800">
+              <img src="assets/images/faculty-2.jpg" alt="Faculty member" class="h-full w-full object-cover" />
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-slate-50">Prof. Manish Kumar</h3>
+            <p class="text-xs text-primary-300">Mathematics Faculty</p>
+            <p class="mt-1 text-[11px] text-slate-300">
+              Known for intuitive explanations in Calculus, Algebra and Coordinate Geometry.
+            </p>
+          </article>
+
+          <article class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="140">
+            <div class="relative h-24 w-24 overflow-hidden rounded-2xl bg-slate-800">
+              <img src="assets/images/faculty-3.jpg" alt="Faculty member" class="h-full w-full object-cover" />
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-slate-50">Ms. Shreya N</h3>
+            <p class="text-xs text-primary-300">Biology Faculty</p>
+            <p class="mt-1 text-[11px] text-slate-300">
+              Focused on NEET Biology with concept maps, mnemonics and regular revisions.
+            </p>
+          </article>
+
+          <article class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative h-24 w-24 overflow-hidden rounded-2xl bg-slate-800">
+              <img src="assets/images/faculty-4.jpg" alt="Faculty member" class="h-full w-full object-cover" />
+            </div>
+            <h3 class="mt-3 text-sm font-semibold text-slate-50">Mr. Aditya Verma</h3>
+            <p class="text-xs text-primary-300">Computer Science Faculty</p>
+            <p class="mt-1 text-[11px] text-slate-300">
+              Builds strong programming foundations and logical thinking using real-world examples.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="border-t border-white/5 bg-slate-950/90 py-8">
+    <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 text-xs text-slate-300 md:flex-row md:items-center md:justify-between md:px-6">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="text-sm font-semibold text-slate-50">
+            KPS PU College
+          </span>
+        </div>
+        <p class="mt-1 max-w-md text-[11px] text-slate-400">
+          Premier Pre-University College focused on academic excellence,
+          discipline and holistic development.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-4">
+        <div class="flex gap-3">
+          <a href="#" aria-label="Facebook" class="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-slate-200 ring-1 ring-white/10 hover:bg-white/10">
+            <i class="fa-brands fa-facebook-f text-[13px]"></i>
+          </a>
+          <a href="#" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-slate-200 ring-1 ring-white/10 hover:bg-white/10">
+            <i class="fa-brands fa-instagram text-[13px]"></i>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-slate-200 ring-1 ring-white/10 hover:bg-white/10">
+            <i class="fa-brands fa-linkedin-in text-[13px]"></i>
+          </a>
+        </div>
+        <div class="text-[11px] text-slate-500">
+          © <span id="year"></span> KPS PU College. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
