@@ -198,9 +198,29 @@ document.addEventListener('DOMContentLoaded', () => {
     filterButtons.forEach((btn) => {
       btn.addEventListener('click', () => {
         const filter = btn.getAttribute('data-filter');
+        const group = btn.getAttribute('data-group');
+
+        // New grouped filter mode (college/hostel sections)
+        if (group) {
+          const groupButtons = document.querySelectorAll(`.gallery-filter[data-group="${group}"]`);
+          groupButtons.forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          galleryItems.forEach((item) => {
+            if (item.getAttribute('data-gallery-group') !== group) return;
+            const type = item.getAttribute('data-media');
+            if (filter === 'all' || filter === type) {
+              item.classList.remove('hidden');
+            } else {
+              item.classList.add('hidden');
+            }
+          });
+          return;
+        }
+
+        // Backward compatibility for any older single-filter markup
         filterButtons.forEach((b) => b.classList.remove('active'));
         btn.classList.add('active');
-
         galleryItems.forEach((item) => {
           const type = item.getAttribute('data-type');
           if (filter === 'all' || filter === type) {
@@ -247,8 +267,9 @@ document.addEventListener('DOMContentLoaded', () => {
     galleryItems.forEach((item) => {
       item.addEventListener('click', () => {
         const type = item.getAttribute('data-type');
+        const media = item.getAttribute('data-media');
         const caption = item.getAttribute('data-caption') || '';
-        if (type === 'image') {
+        if (type === 'image' || media === 'photo' || item.hasAttribute('data-src')) {
           const src = item.getAttribute('data-src');
           if (src) openLightboxImage(src, caption);
         } else {

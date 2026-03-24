@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results | KPS PU COLLEGE</title>
+  <meta name="description" content="Results and achievements of KPS PU COLLEGE including board performance and competitive exam highlights." />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              500: '#2563eb',
+              600: '#1d4ed8',
+            },
+            accent: {
+              400: '#facc15',
+              500: '#eab308',
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="font-sans bg-slate-950 text-slate-100 antialiased">
+  <!-- Shared Navbar -->
+  <header class="navbar fixed inset-x-0 top-0 z-30 border-b border-white/5 bg-slate-950/80 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="h-10 w-10 overflow-hidden rounded-xl ring-1 ring-white/15">
+          <img src="assets/images/logo.png" alt="KPS PU COLLEGE Logo" class="h-full w-full object-cover" />
+        </div>
+        <div class="leading-tight">
+          <div class="text-sm font-semibold tracking-wide text-slate-50">
+            KPS PU COLLEGE
+          </div>
+          <div class="text-[11px] text-slate-400">
+            Pre-University Institution
+          </div>
+        </div>
+      </a>
+
+      <nav
+        id="navMenu"
+        class="absolute left-0 right-0 top-full hidden flex-col gap-2 border-b border-slate-800 bg-slate-950/95 px-4 pb-4 pt-2 text-sm md:static md:flex md:flex-row md:items-center md:gap-6 md:border-none md:bg-transparent md:p-0"
+      >
+        <a href="index.html#hero" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="results.html" class="nav-link active">Results</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a
+          href="contact.html"
+          class="mt-2 inline-flex items-center justify-center rounded-full bg-primary-600 px-4 py-1.5 text-xs font-semibold text-white shadow-lg shadow-primary-600/40 transition hover:bg-primary-500 md:mt-0"
+        >
+          Apply Now
+        </a>
+        <button
+          id="themeToggle"
+          class="mt-2 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition hover:bg-white/10 md:mt-0"
+          type="button"
+          aria-label="Toggle dark mode"
+        >
+          <i class="fa-solid fa-moon text-xs"></i>
+        </button>
+      </nav>
+
+      <button
+        id="navToggle"
+        class="ml-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-100 md:hidden"
+        aria-label="Toggle navigation"
+        type="button"
+      >
+        <i class="fa-solid fa-bars text-sm"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="pt-20 md:pt-24">
+    <!-- Page header -->
+    <section class="relative overflow-hidden border-b border-white/5 bg-gradient-to-br from-slate-950 via-slate-900 to-primary-900/40 py-14 md:py-16">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute -left-24 top-0 h-64 w-64 rounded-full bg-primary-600/30 blur-3xl"></div>
+        <div class="absolute bottom-0 right-[-6rem] h-80 w-80 rounded-full bg-accent-500/20 blur-3xl"></div>
+      </div>
+      <div class="mx-auto max-w-6xl px-4 md:px-6 relative">
+        <p class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
+          Results & Achievements
+        </p>
+        <h1 class="mt-3 text-2xl font-semibold text-slate-50 sm:text-3xl">
+          Consistent performance backed by discipline and mentorship.
+        </h1>
+        <p class="mt-3 max-w-2xl text-sm text-slate-300 sm:text-base">
+          Explore highlights of our academic results, competitive exam achievements and the systems that drive improvement.
+        </p>
+      </div>
+    </section>
+
+    <!-- Stats + Highlights -->
+    <section id="results-stats" class="py-12 md:py-14">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <div class="grid gap-6 md:grid-cols-[1.3fr,1fr] md:items-stretch">
+          <div
+            class="overflow-hidden rounded-3xl bg-gradient-to-br from-primary-600/70 via-slate-950 to-slate-950 ring-1 ring-white/10 shadow-xl shadow-primary-900/70"
+            data-aos="fade-up"
+          >
+            <div class="p-6 md:p-8">
+              <div class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-200">
+                Outcome Focus
+              </div>
+              <h2 class="mt-3 text-xl font-semibold text-slate-50 sm:text-2xl">
+                Strong board results & competitive readiness.
+              </h2>
+              <p class="mt-3 text-sm text-slate-100/90">
+                Our teaching framework combines concept clarity, practice intensity and continuous evaluation so students stay exam-ready throughout the year.
+              </p>
+              <ul class="mt-5 space-y-2 text-xs text-slate-100/90">
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-emerald-300"></i>
+                  Weekly tests and chapter-wise revisions.
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-emerald-300"></i>
+                  Structured doubt-clearing sessions.
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-emerald-300"></i>
+                  Performance tracking with mentoring.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 text-center" data-aos="fade-up" data-aos-delay="80">
+            <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl">
+              <div class="text-2xl font-semibold text-slate-50 counter" data-target="1000">0</div>
+              <div class="mt-1 text-xs font-medium uppercase tracking-wide text-slate-200">
+                Students Mentored
+              </div>
+            </div>
+            <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl">
+              <div class="text-2xl font-semibold text-slate-50 counter" data-target="95">0</div>
+              <div class="mt-1 text-xs font-medium uppercase tracking-wide text-slate-200">
+                Pass Percentage
+              </div>
+            </div>
+            <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl">
+              <div class="text-2xl font-semibold text-slate-50 counter" data-target="75">0</div>
+              <div class="mt-1 text-xs font-medium uppercase tracking-wide text-slate-200">
+                Competitive Ranks
+              </div>
+            </div>
+            <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur-xl">
+              <div class="text-2xl font-semibold text-slate-50 counter" data-target="15">0</div>
+              <div class="mt-1 text-xs font-medium uppercase tracking-wide text-slate-200">
+                Years of Excellence
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Toppers / Highlights -->
+    <section class="pb-14 md:pb-16">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <div class="grid gap-6 lg:grid-cols-3">
+          <div class="lg:col-span-2 rounded-3xl bg-white/5 p-5 ring-1 ring-white/10 backdrop-blur-xl" data-aos="fade-up">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h2 class="text-lg font-semibold text-slate-50">Board Exam Highlights</h2>
+                <p class="mt-1 text-xs text-slate-300">
+                  Update these entries every year to reflect the latest results.
+                </p>
+              </div>
+              <div class="text-[11px] text-slate-400">
+                <i class="fa-solid fa-award text-accent-400"></i>
+                2025–26
+              </div>
+            </div>
+
+            <div class="mt-4 overflow-hidden rounded-2xl ring-1 ring-white/10">
+              <table class="w-full text-left text-xs">
+                <thead class="bg-slate-950/60 text-slate-200">
+                  <tr>
+                    <th class="px-4 py-3 font-semibold">Student</th>
+                    <th class="px-4 py-3 font-semibold">Stream</th>
+                    <th class="px-4 py-3 font-semibold">Score</th>
+                    <th class="px-4 py-3 font-semibold">Achievement</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-white/10 bg-white/5 text-slate-100">
+                  <tr>
+                    <td class="px-4 py-3">Student Name 1</td>
+                    <td class="px-4 py-3">PCMB</td>
+                    <td class="px-4 py-3">98%</td>
+                    <td class="px-4 py-3">College Topper</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3">Student Name 2</td>
+                    <td class="px-4 py-3">PCMC</td>
+                    <td class="px-4 py-3">97%</td>
+                    <td class="px-4 py-3">Distinction</td>
+                  </tr>
+                  <tr>
+                    <td class="px-4 py-3">Student Name 3</td>
+                    <td class="px-4 py-3">PCMB</td>
+                    <td class="px-4 py-3">96%</td>
+                    <td class="px-4 py-3">Distinction</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="rounded-3xl bg-white/5 p-5 ring-1 ring-white/10 backdrop-blur-xl" data-aos="fade-up" data-aos-delay="80">
+            <h2 class="text-lg font-semibold text-slate-50">Competitive Exam Wins</h2>
+            <p class="mt-1 text-xs text-slate-300">
+              Highlights for NEET, CET, JEE and other entrances.
+            </p>
+
+            <div class="mt-4 space-y-3 text-xs text-slate-300">
+              <div class="rounded-2xl bg-slate-950/40 p-4 ring-1 ring-white/10">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] uppercase tracking-wide text-slate-400">NEET</span>
+                  <i class="fa-solid fa-stethoscope text-accent-400"></i>
+                </div>
+                <div class="mt-2 font-semibold text-slate-50">Top rank highlights</div>
+                <p class="mt-1 text-[11px] text-slate-300">Add rank details here.</p>
+              </div>
+              <div class="rounded-2xl bg-slate-950/40 p-4 ring-1 ring-white/10">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] uppercase tracking-wide text-slate-400">CET</span>
+                  <i class="fa-solid fa-ranking-star text-primary-300"></i>
+                </div>
+                <div class="mt-2 font-semibold text-slate-50">Strong CET outcomes</div>
+                <p class="mt-1 text-[11px] text-slate-300">Add rank details here.</p>
+              </div>
+              <div class="rounded-2xl bg-slate-950/40 p-4 ring-1 ring-white/10">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] uppercase tracking-wide text-slate-400">JEE</span>
+                  <i class="fa-solid fa-atom text-emerald-300"></i>
+                </div>
+                <div class="mt-2 font-semibold text-slate-50">JEE preparation</div>
+                <p class="mt-1 text-[11px] text-slate-300">Add rank details here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="border-t border-white/5 bg-slate-950/90 py-8">
+    <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 text-xs text-slate-300 md:flex-row md:items-center md:justify-between md:px-6">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="text-sm font-semibold text-slate-50">
+            KPS PU COLLEGE
+          </span>
+        </div>
+        <p class="mt-1 max-w-md text-[11px] text-slate-400">
+          Pre-University College focused on academic excellence,
+          discipline and holistic development.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-4">
+        <div class="flex gap-3">
+          <a href="#" aria-label="Facebook" class="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-slate-200 ring-1 ring-white/10 hover:bg-white/10">
+            <i class="fa-brands fa-facebook-f text-[13px]"></i>
+          </a>
+          <a href="#" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-slate-200 ring-1 ring-white/10 hover:bg-white/10">
+            <i class="fa-brands fa-instagram text-[13px]"></i>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-slate-200 ring-1 ring-white/10 hover:bg-white/10">
+            <i class="fa-brands fa-linkedin-in text-[13px]"></i>
+          </a>
+        </div>
+        <div class="text-[11px] text-slate-500">
+          © <span id="year"></span> KPS PU COLLEGE. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

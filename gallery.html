@@ -47,15 +47,15 @@
   <header class="navbar fixed inset-x-0 top-0 z-30 border-b border-white/5 bg-slate-950/80 backdrop-blur-xl">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
       <a href="index.html" class="flex items-center gap-3">
-        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 text-lg font-semibold text-slate-900 shadow-md shadow-primary-500/40">
-          K
+        <div class="h-10 w-10 overflow-hidden rounded-xl ring-1 ring-white/15">
+          <img src="assets/images/logo.png" alt="KPS PU COLLEGE Logo" class="h-full w-full object-cover" />
         </div>
         <div class="leading-tight">
           <div class="text-sm font-semibold tracking-wide text-slate-50">
-            KPS PU College
+            KPS PU COLLEGE
           </div>
           <div class="text-[11px] text-slate-400">
-            Premier Pre-University Institution
+            Pre-University Institution
           </div>
         </div>
       </a>
@@ -68,6 +68,7 @@
         <a href="about.html" class="nav-link">About</a>
         <a href="courses.html" class="nav-link">Courses</a>
         <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="results.html" class="nav-link">Results</a>
         <a href="gallery.html" class="nav-link active">Gallery</a>
         <a href="contact.html" class="nav-link">Contact</a>
         <a
@@ -118,32 +119,20 @@
       </div>
     </section>
 
-    <!-- Filters -->
-    <section class="py-6 md:py-8 border-b border-white/5">
+    <!-- College Gallery -->
+    <section class="py-8 md:py-10 border-b border-white/5">
       <div class="mx-auto max-w-6xl px-4 md:px-6">
-        <div class="flex flex-wrap items-center gap-3 text-xs">
-          <button class="gallery-filter active" data-filter="all">
-            All
-          </button>
-          <button class="gallery-filter" data-filter="image">
-            Images
-          </button>
-          <button class="gallery-filter" data-filter="short-video">
-            Short Videos
-          </button>
-          <button class="gallery-filter" data-filter="long-video">
-            Long Videos
-          </button>
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <h2 class="text-lg font-semibold text-slate-50">College Gallery</h2>
+          <div class="flex flex-wrap items-center gap-3 text-xs">
+            <button class="gallery-filter active" data-group="college" data-filter="all">ALL</button>
+            <button class="gallery-filter" data-group="college" data-filter="photo">Photos</button>
+            <button class="gallery-filter" data-group="college" data-filter="video">Videos</button>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Gallery grid -->
-    <section class="py-10 md:py-12">
-      <div class="mx-auto max-w-6xl px-4 md:px-6">
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <!-- Image items -->
-          <div class="gallery-item group" data-type="image" data-src="assets/images/campus-hero.jpg" data-caption="Campus view">
+        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="gallery-item group" data-gallery-group="college" data-media="photo" data-src="assets/images/campus-hero.jpg" data-caption="Campus view">
             <div class="relative h-44 overflow-hidden rounded-2xl bg-slate-800 ring-1 ring-white/10" data-aos="fade-up">
               <img src="assets/images/campus-hero.jpg" alt="Campus view" class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-110" />
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent opacity-80"></div>
@@ -159,7 +148,7 @@
             </div>
           </div>
 
-          <div class="gallery-item group" data-type="image" data-src="assets/images/classroom.jpg" data-caption="Classroom">
+          <div class="gallery-item group" data-gallery-group="college" data-media="photo" data-src="assets/images/classroom.jpg" data-caption="Classroom">
             <div class="relative h-44 overflow-hidden rounded-2xl bg-slate-800 ring-1 ring-white/10" data-aos="fade-up" data-aos-delay="60">
               <img src="assets/images/classroom.jpg" alt="Classroom" class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-110" />
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent opacity-80"></div>
@@ -175,7 +164,7 @@
             </div>
           </div>
 
-          <div class="gallery-item group" data-type="image" data-src="assets/images/labs.jpg" data-caption="Labs">
+          <div class="gallery-item group" data-gallery-group="college" data-media="photo" data-src="assets/images/labs.jpg" data-caption="Labs">
             <div class="relative h-44 overflow-hidden rounded-2xl bg-slate-800 ring-1 ring-white/10" data-aos="fade-up" data-aos-delay="120">
               <img src="assets/images/labs.jpg" alt="Laboratories" class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-110" />
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent opacity-80"></div>
@@ -191,8 +180,7 @@
             </div>
           </div>
 
-          <!-- Short video items (use poster image and JS for modal; actual video files optional) -->
-          <div class="gallery-item group" data-type="short-video" data-video="assets/videos/campus-short.mp4" data-caption="Campus Tour (Short)">
+          <div class="gallery-item group" data-gallery-group="college" data-media="video" data-video="assets/videos/campus-short.mp4" data-caption="Campus Tour (Short)">
             <div class="relative h-44 overflow-hidden rounded-2xl bg-slate-800 ring-1 ring-white/10" data-aos="fade-up">
               <img src="assets/images/campus-hero.jpg" alt="Short campus video" class="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:brightness-110" />
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
@@ -207,7 +195,7 @@
             </div>
           </div>
 
-          <div class="gallery-item group" data-type="short-video" data-video="assets/videos/labs-short.mp4" data-caption="Lab Demo (Short)">
+          <div class="gallery-item group" data-gallery-group="college" data-media="video" data-video="assets/videos/labs-short.mp4" data-caption="Lab Demo (Short)">
             <div class="relative h-44 overflow-hidden rounded-2xl bg-slate-800 ring-1 ring-white/10" data-aos="fade-up" data-aos-delay="60">
               <img src="assets/images/labs.jpg" alt="Short lab video" class="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:brightness-110" />
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
@@ -222,8 +210,7 @@
             </div>
           </div>
 
-          <!-- Long video items -->
-          <div class="gallery-item group" data-type="long-video" data-video="assets/videos/campus-long.mp4" data-caption="Campus Tour (Full)">
+          <div class="gallery-item group" data-gallery-group="college" data-media="video" data-video="assets/videos/campus-long.mp4" data-caption="Campus Tour (Full)">
             <div class="relative h-44 overflow-hidden rounded-2xl bg-slate-800 ring-1 ring-white/10" data-aos="fade-up">
               <img src="assets/images/campus-hero.jpg" alt="Long campus video" class="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:brightness-110" />
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
@@ -238,18 +225,106 @@
             </div>
           </div>
 
-          <div class="gallery-item group" data-type="image" data-src="assets/images/sports.jpg" data-caption="Sports Day">
-            <div class="relative h-44 overflow-hidden rounded-2xl bg-slate-800 ring-1 ring-white/10" data-aos="fade-up" data-aos-delay="120">
-              <img src="assets/images/sports.jpg" alt="Sports event" class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-110" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Hostel Gallery -->
+    <section class="py-8 md:py-10">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <h2 class="text-lg font-semibold text-slate-50">Hostel Gallery</h2>
+          <div class="flex flex-wrap items-center gap-3 text-xs">
+            <button class="gallery-filter active" data-group="hostel" data-filter="all">ALL</button>
+            <button class="gallery-filter" data-group="hostel" data-filter="photo">Photos</button>
+            <button class="gallery-filter" data-group="hostel" data-filter="video">Videos</button>
+          </div>
+        </div>
+
+        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="gallery-item group" data-gallery-group="hostel" data-media="photo" data-src="assets/images/hostel.jpg" data-caption="Hostel Building">
+            <div class="relative h-44 overflow-hidden rounded-2xl bg-slate-800 ring-1 ring-white/10" data-aos="fade-up">
+              <img src="assets/images/hostel.jpg" alt="Hostel building" class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-110" />
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent opacity-80"></div>
               <div class="absolute inset-0 flex items-end justify-between p-3 text-xs text-slate-100">
                 <div>
-                  <div class="font-semibold">Sports Day</div>
-                  <div class="text-[11px] text-slate-300">Outdoor events</div>
+                  <div class="font-semibold">Hostel Building</div>
+                  <div class="text-[11px] text-slate-300">Campus accommodation</div>
                 </div>
                 <div class="flex h-7 w-7 items-center justify-center rounded-full bg-white/10">
                   <i class="fa-solid fa-magnifying-glass-plus text-[11px]"></i>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item group" data-gallery-group="hostel" data-media="photo" data-src="assets/images/library.jpg" data-caption="Study Hall">
+            <div class="relative h-44 overflow-hidden rounded-2xl bg-slate-800 ring-1 ring-white/10" data-aos="fade-up" data-aos-delay="60">
+              <img src="assets/images/library.jpg" alt="Hostel study hall" class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent opacity-80"></div>
+              <div class="absolute inset-0 flex items-end justify-between p-3 text-xs text-slate-100">
+                <div>
+                  <div class="font-semibold">Study Hall</div>
+                  <div class="text-[11px] text-slate-300">Focused learning space</div>
+                </div>
+                <div class="flex h-7 w-7 items-center justify-center rounded-full bg-white/10">
+                  <i class="fa-solid fa-magnifying-glass-plus text-[11px]"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item group" data-gallery-group="hostel" data-media="photo" data-src="assets/images/campus-safety.jpg" data-caption="Hostel Safety">
+            <div class="relative h-44 overflow-hidden rounded-2xl bg-slate-800 ring-1 ring-white/10" data-aos="fade-up" data-aos-delay="120">
+              <img src="assets/images/campus-safety.jpg" alt="Hostel safety facilities" class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent opacity-80"></div>
+              <div class="absolute inset-0 flex items-end justify-between p-3 text-xs text-slate-100">
+                <div>
+                  <div class="font-semibold">Hostel Safety</div>
+                  <div class="text-[11px] text-slate-300">Secure and supervised</div>
+                </div>
+                <div class="flex h-7 w-7 items-center justify-center rounded-full bg-white/10">
+                  <i class="fa-solid fa-magnifying-glass-plus text-[11px]"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item group" data-gallery-group="hostel" data-media="video" data-video="assets/videos/hostel-tour-short.mp4" data-caption="Hostel Tour (Short)">
+            <div class="relative h-44 overflow-hidden rounded-2xl bg-slate-800 ring-1 ring-white/10" data-aos="fade-up">
+              <img src="assets/images/hostel.jpg" alt="Short hostel video" class="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:brightness-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+              <div class="absolute inset-0 flex flex-col items-center justify-center gap-2">
+                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-white ring-2 ring-white/60">
+                  <i class="fa-solid fa-play text-sm pl-0.5"></i>
+                </div>
+                <div class="text-xs font-semibold text-slate-100">Hostel Tour (Short)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item group" data-gallery-group="hostel" data-media="video" data-video="assets/videos/hostel-mess-short.mp4" data-caption="Hostel Mess (Short)">
+            <div class="relative h-44 overflow-hidden rounded-2xl bg-slate-800 ring-1 ring-white/10" data-aos="fade-up" data-aos-delay="60">
+              <img src="assets/images/hostel.jpg" alt="Hostel mess video" class="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:brightness-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+              <div class="absolute inset-0 flex flex-col items-center justify-center gap-2">
+                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-white ring-2 ring-white/60">
+                  <i class="fa-solid fa-play text-sm pl-0.5"></i>
+                </div>
+                <div class="text-xs font-semibold text-slate-100">Hostel Mess (Short)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item group" data-gallery-group="hostel" data-media="video" data-video="assets/videos/hostel-tour-long.mp4" data-caption="Hostel Tour (Full)">
+            <div class="relative h-44 overflow-hidden rounded-2xl bg-slate-800 ring-1 ring-white/10" data-aos="fade-up" data-aos-delay="120">
+              <img src="assets/images/hostel.jpg" alt="Long hostel video" class="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:brightness-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+              <div class="absolute inset-0 flex flex-col items-center justify-center gap-2">
+                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-white ring-2 ring-white/60">
+                  <i class="fa-solid fa-play text-sm pl-0.5"></i>
+                </div>
+                <div class="text-xs font-semibold text-slate-100">Hostel Tour (Full)</div>
               </div>
             </div>
           </div>
@@ -283,12 +358,11 @@
       <div>
         <div class="flex items-center gap-2">
           <span class="text-sm font-semibold text-slate-50">
-            KPS PU College
+            KPS P U COLLEGE
           </span>
         </div>
         <p class="mt-1 max-w-md text-[11px] text-slate-400">
-          Premier Pre-University College focused on academic excellence,
-          discipline and holistic development.
+          B H ROAD, ARSIKERE 573103
         </p>
       </div>
       <div class="flex flex-wrap items-center gap-4">
@@ -304,7 +378,7 @@
           </a>
         </div>
         <div class="text-[11px] text-slate-500">
-          © <span id="year"></span> KPS PU College. All rights reserved.
+          © <span id="year"></span> KPS PU COLLEGE. All rights reserved.
         </div>
       </div>
     </div>
