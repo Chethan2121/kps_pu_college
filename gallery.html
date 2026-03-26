@@ -19,13 +19,22 @@
           },
           colors: {
             primary: {
+              50: '#eff6ff',
+              100: '#dbeafe',
               500: '#2563eb',
               600: '#1d4ed8',
+              700: '#1e40af',
             },
             accent: {
               400: '#facc15',
               500: '#eab308',
             },
+            darkBg: '#020617',
+            glassLight: 'rgba(255, 255, 255, 0.12)',
+            glassDark: 'rgba(15, 23, 42, 0.7)',
+          },
+          boxShadow: {
+            'glow': '0 0 40px rgba(37, 99, 235, 0.35)',
           },
         },
       },
@@ -42,10 +51,10 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="font-sans bg-slate-950 text-slate-100 antialiased">
+<body class="font-sans bg-slate-950 text-slate-100 antialiased dark-theme">
   <!-- Shared Navbar -->
   <header class="navbar fixed inset-x-0 top-0 z-30 border-b border-white/5 bg-slate-950/80 backdrop-blur-xl">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
       <a href="index.html" class="flex items-center gap-3">
         <div class="h-10 w-10 overflow-hidden rounded-xl ring-1 ring-white/15">
           <img src="assets/images/logo.png" alt="KPS PU COLLEGE Logo" class="h-full w-full object-cover" />
@@ -62,7 +71,7 @@
 
       <nav
         id="navMenu"
-        class="absolute left-0 right-0 top-full hidden flex-col gap-2 border-b border-slate-800 bg-slate-950/95 px-4 pb-4 pt-2 text-sm md:static md:flex md:flex-row md:items-center md:gap-6 md:border-none md:bg-transparent md:p-0"
+        class="hidden flex-col gap-2 bg-slate-950/95 px-4 py-4 text-sm md:flex md:flex-row md:items-center md:gap-6 md:border-none md:bg-transparent md:p-0"
       >
         <a href="index.html#hero" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
@@ -100,12 +109,12 @@
 
   <main class="pt-20 md:pt-24">
     <!-- Page header -->
-    <section class="relative overflow-hidden border-b border-white/5 bg-gradient-to-br from-slate-950 via-slate-900 to-primary-900/40 py-14 md:py-16">
+    <section class="relative overflow-hidden border-b border-white/5 bg-gradient-to-br from-slate-950 via-slate-900 to-primary-900/40 py-16 md:py-20">
       <div class="absolute inset-0 pointer-events-none">
         <div class="absolute -left-24 top-0 h-64 w-64 rounded-full bg-primary-600/30 blur-3xl"></div>
         <div class="absolute bottom-0 right-[-6rem] h-80 w-80 rounded-full bg-accent-500/20 blur-3xl"></div>
       </div>
-      <div class="mx-auto max-w-6xl px-4 md:px-6 relative">
+      <div class="mx-auto max-w-7xl px-4 md:px-6 relative">
         <p class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
           Gallery
         </p>
@@ -121,7 +130,7 @@
 
     <!-- College Gallery -->
     <section class="py-8 md:py-10 border-b border-white/5">
-      <div class="mx-auto max-w-6xl px-4 md:px-6">
+      <div class="mx-auto max-w-7xl px-4 md:px-6">
         <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <h2 class="text-lg font-semibold text-slate-50">College Gallery</h2>
           <div class="flex flex-wrap items-center gap-3 text-xs">
@@ -231,7 +240,7 @@
 
     <!-- Hostel Gallery -->
     <section class="py-8 md:py-10">
-      <div class="mx-auto max-w-6xl px-4 md:px-6">
+      <div class="mx-auto max-w-7xl px-4 md:px-6">
         <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <h2 class="text-lg font-semibold text-slate-50">Hostel Gallery</h2>
           <div class="flex flex-wrap items-center gap-3 text-xs">
@@ -354,7 +363,7 @@
 
   <!-- Shared Footer -->
   <footer class="border-t border-white/5 bg-slate-950/90 py-8">
-    <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 text-xs text-slate-300 md:flex-row md:items-center md:justify-between md:px-6">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 text-xs text-slate-300 md:flex-row md:items-center md:justify-between md:px-6">
       <div>
         <div class="flex items-center gap-2">
           <span class="text-sm font-semibold text-slate-50">

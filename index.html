@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KPS PU COLLEGE | Pre-University Education</title>
+  <title>KPS PU Pre-University College</title>
   <meta name="description" content="KPS PU College offers Pre-University education with expert faculty, modern facilities, and a student-first learning environment." />
   <meta name="keywords" content="KPS PU College, Pre University, PCMB, PCMC, PU College" />
   <link rel="icon" type="image/png" href="assets/images/logo.png" />
@@ -60,7 +60,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="font-sans bg-slate-950 text-slate-100 antialiased">
+<body class="font-sans bg-slate-950 text-slate-100 antialiased dark-theme">
   <!-- Page Loader -->
   <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950">
     <div class="relative">
@@ -90,7 +90,7 @@
   <header
     class="navbar fixed inset-x-0 top-0 z-30 border-b border-white/5 bg-slate-950/80 backdrop-blur-xl transition-colors"
   >
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
       <a href="index.html" class="flex items-center gap-3">
         <div class="h-10 w-10 overflow-hidden rounded-xl ring-1 ring-white/15">
           <img src="assets/images/logo.png" alt="KPS PU COLLEGE Logo" class="h-full w-full object-cover" />
@@ -107,7 +107,7 @@
 
       <nav
         id="navMenu"
-        class="absolute left-0 right-0 top-full hidden flex-col gap-2 border-b border-slate-800 bg-slate-950/95 px-4 pb-4 pt-2 text-sm md:static md:flex md:flex-row md:items-center md:gap-6 md:border-none md:bg-transparent md:p-0"
+        class="hidden flex-col gap-2 bg-slate-950/95 px-4 py-4 text-sm md:flex md:flex-row md:items-center md:gap-6 md:border-none md:bg-transparent md:p-0"
       >
         <a href="index.html#hero" class="nav-link active">Home</a>
         <a href="about.html" class="nav-link">About</a>
@@ -134,6 +134,8 @@
         </button>
       </nav>
 
+      <div id="navOverlay" class="fixed inset-0 bg-black/50 z-30 md:hidden"></div>
+
       <button
         id="navToggle"
         class="ml-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-100 md:hidden"
@@ -147,7 +149,7 @@
 
   <main class="pt-20 md:pt-24">
     <!-- Hero Section -->
-    <section id="hero" class="relative min-h-[85vh] overflow-hidden">
+    <section id="hero" class="relative min-h-screen overflow-hidden">
       <div class="absolute inset-0 -z-10">
         <div class="hero-media">
           <!-- Optional: replace with a campus video under assets/videos -->
@@ -160,25 +162,25 @@
         </div>
       </div>
 
-      <div class="mx-auto flex max-w-6xl flex-col items-center gap-12 px-4 pb-20 pt-16 md:flex-row md:px-6 md:pt-24">
+      <div class="mx-auto container-responsive flex max-w-7xl flex-col items-center gap-12 px-4 pb-20 pt-16 md:flex-row md:px-6 md:pt-24">
         <div class="w-full md:w-3/5" data-aos="fade-right">
           <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.2em] text-accent-400 ring-1 ring-white/10">
             <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
             Admissions Open 2026–27
           </span>
-          <h1 class="mt-5 text-3xl font-semibold leading-tight text-slate-50 sm:text-4xl lg:text-[2.8rem]">
+          <h1 class="hero-title mt-5 font-semibold leading-tight text-slate-50">
             Nurturing Tomorrow's
             <span class="bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 bg-clip-text text-transparent">
               Leaders in Science & Technology
             </span>
           </h1>
-          <p class="mt-4 max-w-xl text-sm text-slate-300 sm:text-base">
+          <p class="hero-subtitle mt-4 max-w-xl text-slate-300">
             KPS PU College blends academic excellence with holistic development,
             preparing students for competitive exams, professional courses, and
             life beyond the classroom.
           </p>
 
-          <div class="mt-7 flex flex-wrap items-center gap-3">
+          <div class="button-group mt-7 flex flex-wrap items-center gap-3">
             <a
               href="#contact"
               class="inline-flex items-center justify-center rounded-full bg-primary-600 px-6 py-2.5 text-xs font-semibold text-white shadow-glow shadow-primary-600/50 transition hover:-translate-y-0.5 hover:bg-primary-500 sm:text-sm"
@@ -194,10 +196,14 @@
             </a>
           </div>
 
-          <div class="mt-8 grid max-w-lg grid-cols-3 gap-4 text-xs sm:text-sm">
+          <div class="stats-grid mt-8 grid max-w-lg grid-cols-3 gap-4 text-xs sm:text-sm">
+            <div class="rounded-2xl bg-glassLight/40 p-3 ring-1 ring-white/10 backdrop-blur-xl">
+              <div class="text-lg font-semibold text-accent-400">8000+</div>
+              <div class="mt-1 text-slate-300">Parents Thanking Trust</div>
+            </div>
             <div class="rounded-2xl bg-glassLight/40 p-3 ring-1 ring-white/10 backdrop-blur-xl">
               <div class="text-lg font-semibold text-accent-400">4000+</div>
-              <div class="mt-1 text-slate-300">Students mentored</div>
+              <div class="mt-1 text-slate-300">Success Stories</div>
             </div>
             <div class="rounded-2xl bg-glassLight/40 p-3 ring-1 ring-white/10 backdrop-blur-xl">
               <div class="text-lg font-semibold text-accent-400">99.99%</div>
@@ -214,7 +220,7 @@
           <div
             class="relative rounded-3xl bg-gradient-to-b from-white/10 to-white/5 p-[1px] shadow-2xl shadow-primary-900/70"
           >
-            <div class="rounded-[1.4rem] bg-slate-950/80 p-5 backdrop-blur-xl">
+            <div class="card-section rounded-[1.4rem] bg-slate-950/80 p-5 backdrop-blur-xl">
               <div class="flex items-center gap-3">
                 <div
                   class="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 text-lg font-semibold text-slate-900 shadow-md shadow-primary-500/40"
@@ -294,8 +300,8 @@
     </section>
 
     <!-- About Preview -->
-    <section id="about" class="py-14 md:py-16">
-      <div class="mx-auto max-w-6xl px-4 md:px-6">
+    <section id="about" class="py-16 md:py-20">
+      <div class="mx-auto max-w-7xl px-4 md:px-6">
         <div class="grid gap-10 md:grid-cols-[1.3fr,1fr] md:items-center">
           <div data-aos="fade-up">
             <div class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
@@ -398,8 +404,8 @@
     </section>
 
     <!-- Courses Section (Preview) -->
-    <section id="courses" class="py-14 md:py-16">
-      <div class="mx-auto max-w-6xl px-4 md:px-6">
+    <section id="courses" class="py-16 md:py-20">
+      <div class="mx-auto max-w-7xl px-4 md:px-6">
         <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div data-aos="fade-up">
             <div class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
@@ -522,8 +528,8 @@
     </section>
 
     <!-- Facilities Preview -->
-    <section id="facilities" class="py-14 md:py-16">
-      <div class="mx-auto max-w-6xl px-4 md:px-6">
+    <section id="facilities" class="py-16 md:py-20">
+      <div class="mx-auto max-w-7xl px-4 md:px-6">
         <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div data-aos="fade-up">
             <div class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
@@ -619,8 +625,8 @@
     </section>
 
     <!-- Faculty Section (Preview) -->
-    <section id="faculty" class="py-14 md:py-16">
-      <div class="mx-auto max-w-6xl px-4 md:px-6">
+    <section id="faculty" class="py-16 md:py-20">
+      <div class="mx-auto max-w-7xl px-4 md:px-6">
         <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div data-aos="fade-up">
             <div class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
@@ -729,8 +735,8 @@
     </section>
 
     <!-- Achievements / Stats -->
-    <section id="achievements" class="py-14 md:py-16">
-      <div class="mx-auto max-w-6xl px-4 md:px-6">
+    <section id="achievements" class="py-16 md:py-20">
+      <div class="mx-auto max-w-7xl px-4 md:px-6">
         <div
           class="overflow-hidden rounded-3xl bg-gradient-to-br from-primary-600/70 via-slate-950 to-slate-950 ring-1 ring-white/10 shadow-xl shadow-primary-900/70"
         >
@@ -800,8 +806,8 @@
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials" class="py-14 md:py-16">
-      <div class="mx-auto max-w-6xl px-4 md:px-6">
+    <section id="testimonials" class="py-16 md:py-20">
+      <div class="mx-auto max-w-7xl px-4 md:px-6">
         <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div data-aos="fade-up">
             <div class="text-xs font-semibold uppercase tracking-[0.25em] text-accent-400">
@@ -985,7 +991,7 @@
 
     <!-- Contact CTA Preview -->
     <section id="contact" class="pb-16">
-      <div class="mx-auto max-w-6xl px-4 md:px-6">
+      <div class="mx-auto max-w-7xl px-4 md:px-6">
         <div
           class="overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-primary-700/60 to-slate-900 ring-1 ring-white/10 shadow-xl shadow-primary-900/70"
           data-aos="fade-up"
@@ -1111,7 +1117,7 @@
 
   <!-- Footer -->
   <footer class="border-t border-white/5 bg-slate-950/90 py-8">
-    <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 text-xs text-slate-300 md:flex-row md:items-center md:justify-between md:px-6">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 text-xs text-slate-300 md:flex-row md:items-center md:justify-between md:px-6">
       <div>
         <div class="flex items-center gap-2">
           <span class="text-sm font-semibold text-slate-50">
