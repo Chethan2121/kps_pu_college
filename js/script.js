@@ -171,49 +171,79 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach((c) => observer.observe(c));
   }
 
-  // Testimonials slider (home page)
+  // Testimonials slider (home page) - Responsive
   const slider = document.getElementById('testimonialSlider');
   if (slider) {
     const track = slider.querySelector('.testimonial-track');
-    const slides = slider.querySelectorAll('.testimonial-slide');
     const prevBtn = document.getElementById('testimonialPrev');
     const nextBtn = document.getElementById('testimonialNext');
-    const dots = slider.querySelectorAll('[data-index]');
     let index = 0;
+    let auto;
+
+    const getVisibleSlides = () => {
+      return Array.from(slider.querySelectorAll('.testimonial-slide')).filter(slide => {
+        return window.getComputedStyle(slide).display !== 'none';
+      });
+    };
+
+    const getVisibleDots = () => {
+      return Array.from(slider.querySelectorAll('[data-index]')).filter(dot => {
+        return window.getComputedStyle(dot).display !== 'none';
+      });
+    };
 
     const updateSlider = () => {
+      const slides = getVisibleSlides();
+      const dots = getVisibleDots();
       const offset = -index * 100;
       track.style.transform = `translateX(${offset}%)`;
       dots.forEach((dot, i) => {
         if (i === index) {
-          dot.classList.remove('w-1.5', 'bg-slate-500');
-          dot.classList.add('w-4', 'bg-primary-400');
+          dot.classList.remove('bg-slate-500');
+          dot.classList.add('bg-primary-400');
         } else {
-          dot.classList.remove('w-4', 'bg-primary-400');
-          dot.classList.add('w-1.5', 'bg-slate-500');
+          dot.classList.remove('bg-primary-400');
+          dot.classList.add('bg-slate-500');
         }
       });
     };
 
     const goTo = (i) => {
+      const slides = getVisibleSlides();
       index = (i + slides.length) % slides.length;
       updateSlider();
     };
 
-    if (prevBtn) prevBtn.addEventListener('click', () => goTo(index - 1));
-    if (nextBtn) nextBtn.addEventListener('click', () => goTo(index + 1));
-    dots.forEach((dot, i) =>
-      dot.addEventListener('click', () => goTo(i))
-    );
+    const initSlider = () => {
+      const slides = getVisibleSlides();
+      const dots = getVisibleDots();
+      index = 0; // Reset to first slide when switching responsive modes
+
+      if (prevBtn) prevBtn.addEventListener('click', () => goTo(index - 1));
+      if (nextBtn) nextBtn.addEventListener('click', () => goTo(index + 1));
+      dots.forEach((dot, i) =>
+        dot.addEventListener('click', () => goTo(i))
+      );
+
+      updateSlider();
+    };
+
+    // Initialize slider
+    initSlider();
+
+    // Handle responsive changes
+    window.addEventListener('resize', () => {
+      clearInterval(auto);
+      initSlider();
+      auto = setInterval(() => goTo(index + 1), 8000);
+    });
 
     // Auto-rotate
-    let auto = setInterval(() => goTo(index + 1), 8000);
+    auto = setInterval(() => goTo(index + 1), 8000);
     slider.addEventListener('mouseenter', () => clearInterval(auto));
     slider.addEventListener('mouseleave', () => {
       auto = setInterval(() => goTo(index + 1), 8000);
     });
-
-    updateSlider();
   }
 
   // Gallery filters & lightbox (gallery page)
